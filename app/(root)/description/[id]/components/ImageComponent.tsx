@@ -1,6 +1,5 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Image from "next/image";
 
 type Props = {
   images?: string[];
@@ -18,13 +17,13 @@ function ImageComponent({ images, imageLinks, img }: Props) {
             <TabsList>
               {images?.map((img) => (
                 <TabsTrigger key={img} value={img}>
-                  <Image width={50} height={50} src={img} alt="" />
+                  <img width={50} height={50} src={img} alt="" />
                 </TabsTrigger>
               ))}
             </TabsList>
             {images?.map((img) => (
               <TabsContent key={img} value={img}>
-                <Image width={250} height={250} src={img} alt="" />
+                <img width={250} height={250} src={img} alt="" />
               </TabsContent>
             ))}
             <TabsContent value="password">
@@ -38,13 +37,13 @@ function ImageComponent({ images, imageLinks, img }: Props) {
           <TabsList>
             {imagesLinkList?.map((img) => (
               <TabsTrigger key={img} value={img}>
-                <Image width={50} height={50} src={img} alt="" />
+                <img width={50} height={50} src={img} alt="" />
               </TabsTrigger>
             ))}
           </TabsList>
           {imagesLinkList?.map((img) => (
             <TabsContent key={img} value={img}>
-              <Image width={250} height={250} src={img} alt="" />
+              <img width={250} height={250} src={img} alt="" />
             </TabsContent>
           ))}
           <TabsContent value="password">

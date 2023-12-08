@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import useCart from "@/hooks/shopping-cart";
 import useTotal from "@/hooks/useTotal";
 import { Eye, Trash2 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import CountBtn from "./CountBtn";
@@ -23,7 +22,7 @@ function Card({ product }: Props) {
   return (
     <center className="my-1 p-2 lg:flex lg:items-center lg:justify-between bg-white shadow-md rounded-md">
       <div className="lg:flex">
-        <Image height={150} width={150} 
+        <img height={150} width={150} 
              src={product.img ? product.images[0] : imagesLinkList[0]}
              alt="" />
         <div>{product.title}</div>

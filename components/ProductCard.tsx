@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 type Props = {
   data: Product;
@@ -12,11 +11,11 @@ function ProductCard({ data }: Props) {
     <div className="my-2 mx-1 bg-white h-[250px] w-[200px] rounded-lg shadow-md flex flex-col cursor-pointer">
       <Link href={`/description/${data.id}`}>
         <div className="relative h-[150px] w-full">
-          <Image
-            fill
+          <img
+            
             src={data.img ? data.images[0] : imagesLinkList[0]}
             alt="img"
-            className="object-cover rounded-t-lg"
+            className="object-cover h-[150px] w-full rounded-t-lg"
           />
         </div>
         <div className="mt-2 px-2 flex-1">
