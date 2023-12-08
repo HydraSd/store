@@ -4,6 +4,8 @@ import ProductCardSkeleton from "@/components/skeletons/productCard-skeleton";
 import { ArrowRight } from "lucide-react";
 import { Suspense } from "react";
 import Image from "next/image";
+import AutomotiveTypes from "@/components/Home/AutomotiveTypes";
+import AskProduct from "@/components/Home/AskProduct";
 
 export default function Home() {
   return (
@@ -13,10 +15,18 @@ export default function Home() {
           <Image fill src={"/banner1.jpg"} alt="" />
         </div>
         <center className="mt-5">
-        <div className="text-sm">Welcome to RedMix, your one-stop destination for high-quality vehicle spare parts in Sri Lanka. Whether you&apos;re a car enthusiast, a professional mechanic, or a vehicle owner in need of replacement parts, we&apos;ve got you covered. Browse through our extensive catalog of genuine and affordable spare parts for all major makes and models. With a commitment to excellence, we offer a seamless online shopping experience, speedy delivery, and exceptional customer service. Trust us to keep your vehicles running smoothly. Start exploring our wide range of automotive solutions today!</div>
-
+          <div className="text-sm">
+            Welcome to RedMix, Sri Lanka&apos;s one-stop shop for high-quality
+            vehicle spare parts. We can help you whether you&apos;re a skilled
+            technician, an enthusiast about cars, or the owner of a vehicle that
+            needs new components. Browse our huge inventory of genuine and
+            reasonably priced spare parts for all major makes and models. We
+            provide a seamless online shopping experience, quick delivery, and
+            great customer service as part of our dedication to excellence. You
+            can rely on us to maintain your cars operating properly. Explore our
+            extensive selection of automotive solutions now!
+          </div>
         </center>
-   
       </div>
       <section className="mt-5 mx-2">
         <MainSection />
@@ -35,7 +45,16 @@ export default function Home() {
         >
           <FeaturedSection />
         </Suspense>
-        <div>{}</div>
+      </section>
+      <section className="mt-2 mx-2 mb-10">
+        <div className="flex items-center justify-between text-xl font-semibold">
+          <div>Automotive Parts</div>
+          <ArrowRight className="text-gray-500" />
+        </div>
+        <AutomotiveTypes />
+      </section>
+      <section>
+        <AskProduct />
       </section>
     </main>
   );

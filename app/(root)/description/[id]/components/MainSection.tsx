@@ -13,6 +13,8 @@ type Props = {
   diliveryFee?: number;
   diliveryPeriod?: string;
   images?: string[];
+  imageLinks?: string;
+  img: boolean
   description?: string;
 };
 
@@ -23,12 +25,14 @@ function MainSection({
   diliveryFee,
   diliveryPeriod,
   images,
+  imageLinks,
+  img,
   description,
 }: Props) {
   return (
     <div className="bg-white lg:flex p-2">
       <div className="lg:w-[40%]">
-        <ImageComponent images={images} />
+        <ImageComponent images={images} imageLinks={imageLinks} img={img}/>
       </div>
       <div className="lg:w-[60%]">
         <div className="text-2xl font-semibold">{title}</div>
@@ -53,7 +57,9 @@ function MainSection({
               description: description!,
               diliveryFee: diliveryFee!,
               diliveryPeriod: diliveryPeriod!,
-              images: images!
+              images: images!,
+              img: img!,
+              imagesLink: imageLinks!
             }}
           />
         </div>

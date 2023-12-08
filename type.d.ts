@@ -1,6 +1,8 @@
 type Product = {
     id: string;
     images: string[];
+    imagesLink: string;
+    img: boolean;
     name: string;
     price: number,
     diliveryPrice: number;
@@ -37,4 +39,13 @@ type CartProduct = {
   diliveryFee: number,
   diliveryPeriod: string,
   images:string[]
+  img: boolean,
+  imagesLink: string
+}
+
+type Order = {
+  user: string;
+  products: string[];
+  status: string;
+  date: string;
 }

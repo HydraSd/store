@@ -13,7 +13,6 @@ function CountBtn({ id, quantity, price }: Props) {
   const [value, setValue] = useState(quantity);
   const update = useCart((state) => state.updateQuantity);
 
-  console.log(value);
 
   const Add = () => {
     const newValue = value + 1;

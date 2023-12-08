@@ -13,6 +13,8 @@ async function GetDocument(collectionName: string, documentId: string) {
         name: data.name,
         price: data.price,
         images: data.images,
+        imageLinks: data.imagesLink,
+        img: data.img,
         diliveryPrice: data.diliveryPrice,
         diliveryTime: data.diliveryTime,
         vehicle: data.vehicle,

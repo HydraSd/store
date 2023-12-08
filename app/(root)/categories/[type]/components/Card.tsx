@@ -8,6 +8,8 @@ type Props = {
 }
 
 function Card({product}: Props) {
+  const imagesLinkList = product.imagesLink?.split("||");
+
   return (
     <Link 
      href={`/description/${product.id}`}
@@ -16,7 +18,7 @@ function Card({product}: Props) {
             <Image
              width={100}
              height={100} 
-             src={product.images[0]}
+             src={product.img ? product.images[0] : imagesLinkList[0]}
              alt=''
              className='h-full w-full object-cover'
             />

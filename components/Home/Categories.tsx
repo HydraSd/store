@@ -28,7 +28,7 @@ function Categories({}: Props) {
   ];
   return (
     <div className="">
-      <div className="flex overflow-x-scroll sm:hidden w-screen">
+      {/* <div className="flex overflow-x-scroll sm:hidden w-screen">
         {categories.map((category) => (
           <Link
             key={category.document}
@@ -39,8 +39,8 @@ function Categories({}: Props) {
             {category.name}
           </Link>
         ))}
-      </div>
-      <div className="hidden sm:mt-3 sm:grid sm:grid-cols-2 lg:grid-cols-4 ">
+      </div> */}
+      <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
         {categories.map((category) => (
           <Link
             key={category.document}

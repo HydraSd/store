@@ -5,7 +5,7 @@ import useTotal from "@/hooks/useTotal";
 import { Eye, Trash2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useDebugValue, useEffect } from "react";
+import React from "react";
 import CountBtn from "./CountBtn";
 
 type Props = {
@@ -13,26 +13,25 @@ type Props = {
 };
 
 function Card({ product }: Props) {
-  const value = useTotal((state:any) => state.amount)
-  const total = product.price * product.quantity;
   const remove = useCart((state:any) => state.removeItem);
 
   const RemoveFromCart = () => {
     remove(product.id)
   }
 
-
-
+  const imagesLinkList = product.imagesLink?.split("||");
   return (
-    <center className="my-1 p-2 md:flex md:items-center md:justify-between bg-white shadow-md rounded-md">
-      <div className="md:flex">
-        <Image height={150} width={150} src={product.images[0]} alt="" />
+    <center className="my-1 p-2 lg:flex lg:items-center lg:justify-between bg-white shadow-md rounded-md">
+      <div className="lg:flex">
+        <Image height={150} width={150} 
+             src={product.img ? product.images[0] : imagesLinkList[0]}
+             alt="" />
         <div>{product.title}</div>
       </div>
       <div>
-        <div className="flex items-center justify-between space-x-3">
+        <div className="flex items-center justify-between space-x-2">
           <CountBtn price={product.price} id={product.id} quantity={product.quantity} />
-          <div className="space-x-2">
+          <div className="flex space-x-1">
             <Link href={`/description/${product.id}`}>
               <Button>
                 <Eye size={20} />
@@ -45,6 +44,7 @@ function Card({ product }: Props) {
             </Button>
           </div>
         </div>
+        
       </div>
     </center>
   );

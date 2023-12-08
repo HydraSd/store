@@ -22,6 +22,9 @@ async function DescriptionPage({ params }: Props) {
           title={product?.name}
           price={product?.price}
           images={product?.images}
+          imageLinks={product?.imageLinks}
+          // @ts-ignore
+          img={product?.img}
           description={product?.description}
         />
       </section>

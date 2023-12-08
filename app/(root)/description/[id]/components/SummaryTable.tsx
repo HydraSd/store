@@ -49,6 +49,7 @@ function SummaryTable({ title, category, type, diliveryPeriod, price, diliveryFe
                 style: "currency",
                 currency: "LKR", // Change the currency code as needed
               })}
+              <div>(Delivery fees are subject to variation based on quantity and situational factors)</div>
             </TableCell>
           </TableRow>
           <TableRow>

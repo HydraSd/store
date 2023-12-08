@@ -12,7 +12,6 @@ type Props = {};
 function CartComponent({}: Props) {
   const cart = useCart((state:any) => state.items)
   const productTotal = useTotal((state:any) => state.amount)
-  const [values, setValues] = useState<number[]>([])
   const [total, setTotal] = useState(0)
 
 
@@ -35,7 +34,6 @@ function CartComponent({}: Props) {
     
     calculateProductSum()
     useTotal.setState({ amount: total })
-    console.log(productTotal)
   }, [cart, total])
 
   if(!isClient){

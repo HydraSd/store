@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./components/Card";
 import useTotal from "@/hooks/useTotal";
 import Price from "@/components/Price";
+import OrderButton from "./components/OrderButton";
 
 type Props = {};
 
@@ -31,6 +32,10 @@ function CartPage({}: Props) {
       {cart.map((product:any) => (
         <Card key={product.id} product={product}/>
       ))}
+      {cart.length > 0 && (
+
+      <OrderButton products={cart} />
+      )}
     </main>
   );
 }

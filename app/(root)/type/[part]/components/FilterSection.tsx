@@ -3,7 +3,6 @@ import { Input } from "@/components/ui/input";
 import React, { useState } from "react";
 
 type Props = {
-  automotiveType: categoryType[];
   vehicleModal: categoryType[];
   indutrialType: categoryType[];
   onSelectCategory: (
@@ -15,7 +14,6 @@ type Props = {
 };
 
 function FilterSection({
-  automotiveType,
   vehicleModal,
   indutrialType,
   onSelectCategory,
@@ -104,45 +102,9 @@ function FilterSection({
         </div>
       )}
 
-      {automotiveType && automotiveType.length > 0 && (
-        <div>
-          <div className="mt-5 font-semibold">Automotive Part</div>
-          <div>
-            {automotiveType.map((type) => (
-              <div
-                key={type.id}
-                className="flex items-center space-x-1 space-y-1"
-              >
-                <input
-                  type="checkbox"
-                  id={type.id}
-                  onChange={(e) => {
-                    const checked = e.target.checked;
+      
 
-                    if (checked) {
-                      setSelectedCategories([...selectedCategories, type.name]);
-                    } else {
-                      setSelectedCategories(
-                        selectedCategories.filter(
-                          (value) => value !== type.name
-                        )
-                      );
-                    }
-                  }}
-                />
-                <label
-                  htmlFor="terms2"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  {type.name}
-                </label>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {indutrialType && indutrialType.length > 0 && (
+      {/* {indutrialType && indutrialType.length > 0 && (
         <div>
           <div className="mt-5 font-semibold">Industrial Part</div>
           <div>
@@ -175,7 +137,7 @@ function FilterSection({
             ))}
           </div>
         </div>
-      )}
+      )} */}
 
       <Button onClick={handleFilterClick} className="mt-5 w-full">
         Filter
