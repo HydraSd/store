@@ -39,8 +39,8 @@ function AskProduct({}: Props) {
     <div className="bg-white shadow-md p-2">
       <h2 className="text-xl font-bold">Ask Us Anything About Our Products</h2>
       <div>
-        Have questions about our products? We're here to help! Fill out the form
-        below to inquire about anything you'd like to know. Our team is eager to
+        Have questions about our products? We&apos;re here to help! Fill out the form
+        below to inquire about anything you&apos;d like to know. Our team is eager to
         assist you in finding the perfect solution for your needs
       </div>
       <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 sm:space-x-2">
