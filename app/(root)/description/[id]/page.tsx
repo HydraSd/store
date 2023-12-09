@@ -3,6 +3,7 @@ import React from "react";
 import MainSection from "./components/MainSection";
 import SummaryTable from "./components/SummaryTable";
 import RelatedProducts from "./components/RelatedProducts";
+import AskProduct from "@/components/Home/AskProduct";
 
 type Props = {
   params: {
@@ -42,6 +43,9 @@ async function DescriptionPage({ params }: Props) {
       <section className="mt-10">
         <div className="text-2xl font-semibold">Related Products</div>
         <RelatedProducts vehcile={product?.vehicle} />
+      </section>
+      <section>
+        <AskProduct />
       </section>
     </main>
   );

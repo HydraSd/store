@@ -37,14 +37,11 @@ function AskProduct({}: Props) {
 
   return (
     <div className="bg-white shadow-md p-2">
-      <div className="text-xl font-bold">Ask for product</div>
+      <h2 className="text-xl font-bold">Ask Us Anything About Our Products</h2>
       <div>
-        We are sorry to hear that you are having trouble finding your product on
-        our website. Please provide us with a detailed description of the part
-        you need, including the model number, serial number, and any other
-        relevant information. We will do our best to locate it for you and get
-        back to you as soon as possible. Thank you for choosing us for your
-        needs.
+        Have questions about our products? We're here to help! Fill out the form
+        below to inquire about anything you'd like to know. Our team is eager to
+        assist you in finding the perfect solution for your needs
       </div>
       <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 sm:space-x-2">
         <div>
