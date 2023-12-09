@@ -12,9 +12,10 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'RedMix',
-  description:  "Welcome to RedMix, your ultimate destination for premium vehicle spare parts in Sri Lanka. Whether you're a car enthusiast, professional mechanic, or a vehicle owner in need of reliable replacement parts, we've got you covered. Our catalog features genuine, cost-effective spare parts for all major makes and models. With a steadfast commitment to excellence, we provide a seamless online shopping experience, swift delivery, and exceptional customer support. Trust us to keep your vehicles running smoothly. Explore our comprehensive automotive solutions today, and let RedMix be your trusted partner in ensuring your vehicles operate at their best.",
+  title: 'RedMix - Your One-Stop Shop for Quality Vehicle Spare Parts in Sri Lanka',
+  description:  "Welcome to RedMix! Explore our extensive catalog of genuine, cost-effective spare parts for all major vehicle makes and models in Sri Lanka. Whether you're a car enthusiast, professional mechanic, or a vehicle owner, RedMix is your reliable source for a wide range of replacement parts. Enjoy a seamless online shopping experience, swift delivery, and exceptional customer support. Keep your vehicles running smoothly with RedMix - Your trusted one-stop shop for all your vehicle spare part needs. Explore our comprehensive automotive solutions today!"
 }
+
 
 export default function RootLayout({
   children,
