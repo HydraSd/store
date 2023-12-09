@@ -43,6 +43,7 @@ function OrderButton({ products }: Props) {
 
             const data = {
                 user: user.email,
+                name: user.displayName,
                 products: productIds,
                 address:address,
                 status: "pending",
