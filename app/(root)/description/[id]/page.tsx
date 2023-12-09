@@ -44,7 +44,7 @@ async function DescriptionPage({ params }: Props) {
         <div className="text-2xl font-semibold">Related Products</div>
         <RelatedProducts vehcile={product?.vehicle} />
       </section>
-      <section>
+      <section className="mt-10">
         <AskProduct />
       </section>
     </main>
