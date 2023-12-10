@@ -12,8 +12,8 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'RedMix - Your Ultimate Source for Affordable Vehicle Spare Parts in Sri Lanka',
-  description:  "Discover the best selection of genuine and affordable vehicle spare parts at RedMix. We cater to car enthusiasts, professional mechanics, and vehicle owners in Sri Lanka, offering a comprehensive range for all major makes and models. Enjoy a seamless online shopping experience, quick delivery, and outstanding customer support. Trust RedMix to keep your vehicles running smoothly. Explore our extensive inventory today for quality and affordability in every spare part you need!"
+  title: 'SSD Auto - Your Ultimate Source for Affordable Vehicle Spare Parts in Sri Lanka',
+  description:  "Discover the best selection of genuine and affordable vehicle spare parts at SSD Auto. We cater to car enthusiasts, professional mechanics, and vehicle owners in Sri Lanka, offering a comprehensive range for all major makes and models. Enjoy a seamless online shopping experience, quick delivery, and outstanding customer support. Trust SSD Auto to keep your vehicles running smoothly. Explore our extensive inventory today for quality and affordability in every spare part you need!"
 }
 
 

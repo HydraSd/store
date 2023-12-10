@@ -16,7 +16,7 @@ export default function Home() {
         </div>
         <center className="mt-5">
           <div className="text-sm">
-            Welcome to RedMix, Sri Lanka&apos;s one-stop shop for high-quality
+            Welcome to SSD Auto, Sri Lanka&apos;s one-stop shop for high-quality
             vehicle spare parts. We can help you whether you&apos;re a skilled
             technician, an enthusiast about cars, or the owner of a vehicle that
             needs new components. Browse our huge inventory of genuine and

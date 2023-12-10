@@ -14,8 +14,8 @@ function Header({}: Props) {
      md:flex-row md:justify-around md:space-y-0"
     >
       <Link href="/" className="py-2 flex items-center text-3xl font-bold">
-        <div className="text-red-600">Red</div>
-        <div>Mix</div>
+        <div className="text-red-600">SSD</div>
+        <div>Auto</div>
         {/* <Image width={250} height={250} alt="" src="/logo/logo2.png" /> */}
       </Link>
       <div className="hidden md:inline-block">
