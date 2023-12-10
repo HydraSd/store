@@ -44,12 +44,12 @@ function SummaryTable({ title, category, type, diliveryPeriod, price, diliveryFe
           <TableRow>
             <TableCell>Dilivery Fee</TableCell>
             <TableCell>
-              {" "}
+              {/* {" "}
               {diliveryFee?.toLocaleString("en-US", {
                 style: "currency",
                 currency: "LKR", // Change the currency code as needed
-              })}
-              <div>(Delivery fees are subject to variation based on quantity and situational factors)</div>
+              })} */}
+              <div>Delivery costs can change depending on the quantity and certain circumstances.</div>
             </TableCell>
           </TableRow>
           <TableRow>

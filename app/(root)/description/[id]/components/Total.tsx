@@ -14,7 +14,7 @@ function Total({price, diliveryFee}: Props) {
     const total = value! + diliveryFee!
   return (
     <div>
-        {total?.toLocaleString("en-US", {
+        {value?.toLocaleString("en-US", {
                 style: "currency",
                 currency: "LKR", // Change the currency code as needed
               })}
