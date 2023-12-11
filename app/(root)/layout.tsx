@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'SSD Auto - Your Ultimate Source for Affordable Vehicle Spare Parts in Sri Lanka',
-  description:  "Discover the best selection of genuine and affordable vehicle spare parts at SSD Auto. We cater to car enthusiasts, professional mechanics, and vehicle owners in Sri Lanka, offering a comprehensive range for all major makes and models. Enjoy a seamless online shopping experience, quick delivery, and outstanding customer support. Trust SSD Auto to keep your vehicles running smoothly. Explore our extensive inventory today for quality and affordability in every spare part you need!"
+  description:  "SSD Auto, a leading provider of genuine and affordable vehicle spare parts, caters to car enthusiasts, professional mechanics, and vehicle owners in Sri Lanka. With a comprehensive range for all major makes and models, SSD Auto ensures smooth operation of vehicles with its seamless online shopping experience, quick delivery, and outstanding customer support."
 }
 
 
