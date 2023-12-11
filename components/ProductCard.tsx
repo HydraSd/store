@@ -19,7 +19,7 @@ function ProductCard({ data }: Props) {
           />
         </div>
         <div className="mt-2 px-2 flex-1">
-          <h1 className="truncate text-lg font-semibold">{data.name}</h1>
+          <h2 className="truncate text-lg font-semibold">{data.name}</h2>
           <h3 className="truncate h-[2.5em] text-sm text-gray-600">
             {data.description}
           </h3>

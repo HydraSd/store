@@ -65,7 +65,7 @@ function FilterSection({
 
       {vehicleModal && vehicleModal.length > 0 && (
         <div>
-          <h1 className="mt-5 font-semibold">Vehicle Modal</h1>
+          <h2 className="mt-5 font-semibold">Vehicle Modal</h2>
           <div>
             {vehicleModal.map((type) => (
               <div
@@ -106,7 +106,7 @@ function FilterSection({
 
       {automotiveType && automotiveType.length > 0 && (
         <div>
-          <h1 className="mt-5 font-semibold">Automotive Part</h1>
+          <h2 className="mt-5 font-semibold">Automotive Part</h2>
           <div>
             {automotiveType.map((type) => (
               <div
@@ -144,7 +144,7 @@ function FilterSection({
 
       {indutrialType && indutrialType.length > 0 && (
         <div>
-          <h1 className="mt-5 font-semibold">Industrial Part</h1>
+          <h2 className="mt-5 font-semibold">Industrial Part</h2>
           <div>
             {indutrialType.map((type) => (
               <div

@@ -39,7 +39,7 @@ function FilterSection({
 
   return (
     <div className="mx-2">
-      <h1 className="text-lg font-semibold">Filter</h1>
+      <h2 className="text-lg font-semibold">Filter</h2>
       <div className="mt-5 grid grid-cols-2 space-x-2">
         <div>
           <div className="font-medium">Min</div>
@@ -63,7 +63,7 @@ function FilterSection({
 
       {vehicleModal && vehicleModal.length > 0 && (
         <div>
-          <h1 className="mt-5 font-semibold">Vehicle Modal</h1>
+          <h2 className="mt-5 font-semibold">Vehicle Modal</h2>
           <div>
             {vehicleModal.map((type) => (
               <div

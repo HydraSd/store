@@ -34,7 +34,7 @@ export default function Home() {
       </section> */}
       <section className="mt-10 mx-2">
         <div className="flex items-center justify-between text-xl font-semibold">
-          <h1>Featured Products</h1>
+          <div>Featured Products</div>
           <ArrowRight className="text-gray-500" />
         </div>
         <Suspense

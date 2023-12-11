@@ -23,11 +23,11 @@ function Card({product}: Props) {
         </div>
         <div className='w-[70%] sm:w-[80%]'>
 
-        <h1 className='truncate text-xl font-semibold'>{product.name}</h1>
+        <h2 className='truncate text-xl font-semibold'>{product.name}</h2>
         <div className='my-1 text-sm  flex'>
-            <h2>{product.category}</h2>
+            <div>{product.category}</div>
             <div  className='mx-2 border-l'/>
-            <h2>{product.type}</h2>
+            <div>{product.type}</div>
         </div>
         <p className='truncate text-sm font-light'>{product.description}
         </p>
