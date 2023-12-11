@@ -16,7 +16,7 @@ async function AutomotiveTypes({}: Props) {
                          href={`/type/${part.name}`}
                         >
                         
-                        <div className='font-semibold'>{part.name}</div>
+                        <h1 className='font-semibold'>{part.name}</h1>
                         <img src={part.img} alt=''className='object-cover h-[150px] w-[150px]
                         hover:scale-105'/>
                         </Link>

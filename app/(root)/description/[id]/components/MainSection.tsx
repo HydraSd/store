@@ -35,8 +35,8 @@ function MainSection({
         <ImageComponent images={images} imageLinks={imageLinks} img={img}/>
       </div>
       <div className="lg:w-[60%]">
-        <div className="text-2xl font-semibold">{title}</div>
-        <div className="text-sm text-gray-600 font-light">{description}</div>
+        <h1 className="text-2xl font-semibold">{title}</h1>
+        <p className="text-sm text-gray-600 font-light">{description}</p>
         <div className="flex items-center mt-5 space-x-10">
           {
  // @ts-ignore

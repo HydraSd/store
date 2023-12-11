@@ -23,14 +23,14 @@ function Card({product}: Props) {
         </div>
         <div className='w-[70%] sm:w-[80%]'>
 
-        <div className='truncate text-xl font-semibold'>{product.name}</div>
+        <h1 className='truncate text-xl font-semibold'>{product.name}</h1>
         <div className='my-1 text-sm  flex'>
-            <div>{product.category}</div>
+            <h2>{product.category}</h2>
             <div  className='mx-2 border-l'/>
-            <div>{product.type}</div>
+            <h2>{product.type}</h2>
         </div>
-        <div className='truncate text-sm font-light'>{product.description}
-        </div>
+        <p className='truncate text-sm font-light'>{product.description}
+        </p>
        
         <Price price={product.price} style='my-2' fianlValue={false}/>
         </div>

@@ -19,10 +19,10 @@ function ProductCard({ data }: Props) {
           />
         </div>
         <div className="mt-2 px-2 flex-1">
-          <div className="truncate text-lg font-semibold">{data.name}</div>
-          <div className="truncate h-[2.5em] text-sm text-gray-600">
+          <h1 className="truncate text-lg font-semibold">{data.name}</h1>
+          <h3 className="truncate h-[2.5em] text-sm text-gray-600">
             {data.description}
-          </div>
+          </h3>
         </div>
         <div className="flex justify-end px-2 pb-2">
           {data.price.toLocaleString("en-US", {

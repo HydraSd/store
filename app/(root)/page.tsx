@@ -1,11 +1,12 @@
 import FeaturedSection from "@/components/Home/FeaturedSection";
-import MainSection from "@/components/Home/MainSection";
+// import MainSection from "@/components/Home/MainSection";
 import ProductCardSkeleton from "@/components/skeletons/productCard-skeleton";
 import { ArrowRight } from "lucide-react";
 import { Suspense } from "react";
 import Image from "next/image";
 import AutomotiveTypes from "@/components/Home/AutomotiveTypes";
 import AskProduct from "@/components/Home/AskProduct";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           <Image fill src={"/banner1.jpg"} alt="" />
         </div>
         <center className="mt-5">
-          <div className="text-sm">
+          <p className="text-sm">
             Welcome to SSD Auto, Sri Lanka&apos;s one-stop shop for high-quality
             vehicle spare parts. We can help you whether you&apos;re a skilled
             technician, an enthusiast about cars, or the owner of a vehicle that
@@ -25,15 +26,15 @@ export default function Home() {
             great customer service as part of our dedication to excellence. You
             can rely on us to maintain your cars operating properly. Explore our
             extensive selection of automotive solutions now!
-          </div>
+          </p>
         </center>
       </div>
-      <section className="mt-5 mx-2">
+      {/* <section className="mt-5 mx-2">
         <MainSection />
-      </section>
-      <section className="mt-2 mx-2">
+      </section> */}
+      <section className="mt-10 mx-2">
         <div className="flex items-center justify-between text-xl font-semibold">
-          <div>Featured Products</div>
+          <h1>Featured Products</h1>
           <ArrowRight className="text-gray-500" />
         </div>
         <Suspense
@@ -46,15 +47,19 @@ export default function Home() {
           <FeaturedSection />
         </Suspense>
       </section>
-      <section className="mt-2 mx-2 mb-10">
+      <section className="mt-10 mx-2 mb-10">
         <div className="flex items-center justify-between text-xl font-semibold">
-          <div>Automotive Parts</div>
-          <ArrowRight className="text-gray-500" />
+          <h1>Automotive Parts</h1>
         </div>
+
         <AutomotiveTypes />
       </section>
-      <section>
+      <section className="mt-20">
         <AskProduct />
+      </section>
+      <section className="mt-20">
+
+    <Footer />
       </section>
     </main>
   );

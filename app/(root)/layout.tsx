@@ -6,7 +6,7 @@ import Header from '@/components/Header/Header'
 // import Bot from '@/components/Bot'
 import MyChatComponent from '@/components/MainBot'
 import ToastPorvider from '@/providers/toast-provider'
-import Footer from '@/components/Footer'
+// import Footer from '@/components/Footer'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -35,6 +35,7 @@ export default function RootLayout({
         </div>
         {/* <Bot /> */}
         {children}
+       
         {/* <Footer /> */}
         </body>
     </html>
