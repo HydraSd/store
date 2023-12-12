@@ -37,8 +37,7 @@ function Client({
         selectedCategories.length === 0 ||
         selectedCategories.includes(result.type);
       const vehicleModalMatches =
-        vehcileModal.length === 0 ||
-        vehcileModal.includes(result.vehicle);
+        vehcileModal.length === 0 || vehcileModal.includes(result.vehicle);
 
       return priceInRange && categoryMatches && vehicleModalMatches;
     });
@@ -47,8 +46,8 @@ function Client({
   };
 
   return (
-    <div className="lg:flex">
-      <div className="hidden lg:inline-block pl-2 w-[20%] border  bg-white shadow-md  h-screen">
+    <div className="lg:flex lg:overflow-y-hidden">
+      <div className="hidden lg:inline-block pl-2 w-[20%] border  bg-white shadow-md  h-screen overflow-y-auto">
         <FilterSection
           indutrialType={industrialType}
           vehicleModal={vehicleModal}
@@ -56,7 +55,7 @@ function Client({
           onSelectCategory={filterResultsByCriteria}
         />
       </div>
-      <div className=" lg:w-[80%] ">
+      <div className=" lg:w-[80%]">
         <div>
           <MobileFilter
             indutrialType={industrialType}
@@ -64,17 +63,19 @@ function Client({
             automotiveType={automotiveType}
             onSelectCategory={filterResultsByCriteria}
           />
-          {results.length !== 0 ? (
-            <div>
-              {results.map((result: Product) => (
-                <Card key={result.id} product={result} />
-              ))}
-            </div>
-          ) : (
-            <p className="mt-10 flex items-center justify-around">
-              <div>No Results</div>
-            </p>
-          )}
+          <div className="lg:h-screen lg:overflow-y-auto">
+            {results.length !== 0 ? (
+              <div>
+                {results.map((result: Product) => (
+                  <Card key={result.id} product={result} />
+                ))}
+              </div>
+            ) : (
+              <p className="mt-10 flex items-center justify-around">
+                <div>No Results</div>
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </div>

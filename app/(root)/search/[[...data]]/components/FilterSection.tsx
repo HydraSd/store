@@ -156,14 +156,17 @@ function FilterSection({
                   id={type.id}
                   onChange={(e) => {
                     const checked = e.target.checked;
-                    
+
                     if (checked) {
                       setSelectedCategories([...selectedCategories, type.name]);
                     } else {
-                      setSelectedCategories(selectedCategories.filter((value) => value !== type.name));
+                      setSelectedCategories(
+                        selectedCategories.filter(
+                          (value) => value !== type.name
+                        )
+                      );
                     }
                   }}
-                  
                 />
                 <label
                   htmlFor="terms2"
