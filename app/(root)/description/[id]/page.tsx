@@ -4,7 +4,7 @@ import MainSection from "./components/MainSection";
 import SummaryTable from "./components/SummaryTable";
 import RelatedProducts from "./components/RelatedProducts";
 import AskProduct from "@/components/Home/AskProduct";
-import type { Metadata, ResolvedMetadata } from "next";
+import type { Metadata } from "next";
 
 type Props = {
   params: {
@@ -15,14 +15,19 @@ type Props = {
 
 export async function generateMetadata(
   {params}: Props,
-  parent: ResolvedMetadata
+  // parent: ResolvedMetadata
 ): Promise<Metadata> {
   const product = await GetDocument("products", decodeURI(params.id));
+
+  // const previousTitle =  parent.title
+  // const previousDescription = parent.description
   return {
-    title: product?.name,
+    title: product?.name ,
     description: product?.description
   }
 }
+
+
 
 async function DescriptionPage({ params }: Props) {
 //  await new Promise((resolve) => setTimeout(resolve, 10000));
