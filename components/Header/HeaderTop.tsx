@@ -10,7 +10,7 @@ function HeaderTop({}: Props) {
         {/* <div className="text-sm cursor-pointer">My Account</div>
         <div className="text-sm cursor-pointer">Wishlist</div>
         <div className="text-sm cursor-pointer">Compare List</div> */}
-        <div className="text-sm cursor-pointer">Blog</div>
+        <a href="https://ssd-auto.blogspot.com/" className="text-sm cursor-pointer">Blog</a>
       </div>
       <User />
     </div>

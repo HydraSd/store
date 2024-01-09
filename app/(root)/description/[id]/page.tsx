@@ -4,6 +4,7 @@ import MainSection from "./components/MainSection";
 import SummaryTable from "./components/SummaryTable";
 import RelatedProducts from "./components/RelatedProducts";
 import AskProduct from "@/components/Home/AskProduct";
+import type { Metadata, ResolvedMetadata } from "next";
 
 type Props = {
   params: {
@@ -11,12 +12,27 @@ type Props = {
   };
 };
 
+
+export async function generateMetadata(
+  {params}: Props,
+  parent: ResolvedMetadata
+): Promise<Metadata> {
+  const product = await GetDocument("products", decodeURI(params.id));
+  return {
+    title: product?.name,
+    description: product?.description
+  }
+}
+
 async function DescriptionPage({ params }: Props) {
 //  await new Promise((resolve) => setTimeout(resolve, 10000));
   const product = await GetDocument("products", decodeURI(params.id));
 
+  
+
   return (
     <main className="my-5 mx-2 md:mx-20">
+     
       <section className="">
         <MainSection
           id = {product?.id}

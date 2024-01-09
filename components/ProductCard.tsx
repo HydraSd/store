@@ -5,10 +5,13 @@ type Props = {
   data: Product;
 };
 
+
+
 function ProductCard({ data }: Props) {
   const imagesLinkList = data.imagesLink?.split("||");
   return (
-    <div className="my-2 mx-1 bg-white h-[250px] w-[200px] rounded-lg shadow-md flex flex-col cursor-pointer">
+    <div className="my-2 mx-1 bg-white h-[250px] w-[200px] rounded-lg shadow-md flex flex-col cursor-pointer
+    ">
       <Link href={`/description/${data.id}`}>
         <div className="relative h-[150px] w-full">
           <img

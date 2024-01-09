@@ -7,13 +7,15 @@ import Image from "next/image";
 import AutomotiveTypes from "@/components/Home/AutomotiveTypes";
 import AskProduct from "@/components/Home/AskProduct";
 import Footer from "@/components/Footer";
+import CaurouselBanner from "@/components/Home/CarouselBanner";
 
 export default function Home() {
   return (
     <main className="">
       <div>
+        {/* <CarouselBanner /> */}
         <div className="relative h-[300px] md:h-[500px] w-screen">
-          <Image fill src={"/banner1.jpg"} alt="" />
+          <Image fill src="https://th.bing.com/th/id/R.e8d6e37567379bf097e5803ef8ca6c7b?rik=9IQANZ1n6%2flsYQ&pid=ImgRaw&r=0&sres=1&sresct=1" alt="" />
         </div>
         <center className="mt-5">
           <p className="text-sm">
