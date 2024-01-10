@@ -12,8 +12,8 @@ import ToastPorvider from '@/providers/toast-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'SSD Auto - Your Ultimate Source for Affordable Vehicle Spare Parts in Sri Lanka',
-  description:  "SSD Auto, a leading provider of genuine and affordable vehicle spare parts, caters to car enthusiasts, professional mechanics, and vehicle owners in Sri Lanka. With a comprehensive range for all major makes and models, SSD Auto ensures smooth operation of vehicles with its seamless online shopping experience, quick delivery, and outstanding customer support."
+  title: 'SSD Auto: Affordable Spare Parts in Sri Lanka',
+  description:  "SSD Auto: Your go-to for genuine, affordable vehicle parts in Sri Lanka. Explore a wide range with seamless online shopping and quick delivery."
 }
 
 
