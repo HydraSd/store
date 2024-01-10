@@ -15,7 +15,11 @@ export default function Home() {
       <div>
         {/* <CarouselBanner /> */}
         <div className="relative h-[300px] md:h-[500px] w-screen">
-          <Image fill src="https://th.bing.com/th/id/R.e8d6e37567379bf097e5803ef8ca6c7b?rik=9IQANZ1n6%2flsYQ&pid=ImgRaw&r=0&sres=1&sresct=1" alt="banner" />
+          <Image
+          style={{
+            objectFit: 'cover'
+          }}
+          fill src="https://th.bing.com/th/id/R.e8d6e37567379bf097e5803ef8ca6c7b?rik=9IQANZ1n6%2flsYQ&pid=ImgRaw&r=0&sres=1&sresct=1" alt="banner" />
         </div>
         <center className="mt-5">
           <p className="text-sm">

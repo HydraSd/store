@@ -1,5 +1,4 @@
 import Price from "@/components/Price";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -15,7 +14,7 @@ function Card({ product }: Props) {
       className="m-2 flex bg-white p-2 border h-[180px] rounded-lg cursor-pointer"
     >
       <div className="">
-        <Image
+        <img
           key={product.id}
           width={100}
           height={100}
