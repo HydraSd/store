@@ -1,5 +1,4 @@
 import GetData from '@/app/firebase/get-data';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
@@ -18,7 +17,7 @@ async function AutomotiveTypes({}: Props) {
                         >
                         
                         <h2 className='font-semibold'>{part.name}</h2>
-                        <Image key={part.id} src={part.img} alt={part.name}className='object-cover h-[150px] w-[150px]
+                        <img key={part.id} src={part.img} alt={part.name} className='object-cover h-[150px] w-[150px]
                         hover:scale-105'/>
                         </Link>
                     </div>
