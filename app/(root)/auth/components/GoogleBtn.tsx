@@ -23,7 +23,7 @@ function GoogleBtn({}: Props) {
       onClick={loging}
       className="p-2 border flex items-center text-lg font-medium shadow-md cursor-pointer"
     >
-      <Image width={40} height={30} alt="" src="/logo/google.png" />
+      <Image width={40} height={30} alt="google_btn" src="/logo/google.png" />
 
       <div className="ml-10">Loging with Google</div>
     </div>

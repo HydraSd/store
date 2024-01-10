@@ -27,7 +27,7 @@ function CarouselBanner({}: Props) {
             <Image
               key={img}
               src={img}
-              alt=""
+              alt={img}
               fill
               // width={1920}
               // height={1080}

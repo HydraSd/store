@@ -17,7 +17,7 @@ function ProductCard({ data }: Props) {
           <img
             
             src={data.img ? data.images[0] : imagesLinkList[0]}
-            alt="img"
+            alt={data.name}
             className="object-cover h-[150px] w-full rounded-t-lg"
           />
         </div>
