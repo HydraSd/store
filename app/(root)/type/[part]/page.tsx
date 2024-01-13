@@ -2,11 +2,26 @@ import GetByType from '@/app/firebase/getBy-part';
 import React from 'react'
 import Client from './components/Client';
 import GetData from '@/app/firebase/get-data';
+import { Metadata } from 'next';
 
 type Props = {
     params: {
         data: [];
       };
+}
+
+export async function generateMetadata(
+  {params}: Props,
+  // parent: ResolvedMetadata
+): Promise<Metadata> {
+ // @ts-ignore
+ const part = decodeURI(params['part']);
+
+
+  return {
+    title: `${part} in Sri Lanka`,
+  
+  }
 }
 
 async function PartTypePage({params}: Props) {
