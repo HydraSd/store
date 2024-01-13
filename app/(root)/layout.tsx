@@ -25,7 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+      <meta name="google-site-verification" content="v9c2CEKmgiTTg8-_C_9DIsWD0_VFZCFM_7Fkh48uaTI" />
       <link rel="icon" href="/logo/ssdlogo.png" sizes="any" />
+      </head>
       <body className={inter.className}>
         <ToastPorvider />
         <HeaderTop />
