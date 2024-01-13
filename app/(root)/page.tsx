@@ -16,13 +16,18 @@ export default function Home() {
         {/* <CarouselBanner /> */}
         <div className="relative h-[300px] md:h-[500px] w-screen">
           <Image
-          style={{
-            objectFit: 'cover'
-          }}
-          fill src="https://th.bing.com/th/id/R.e8d6e37567379bf097e5803ef8ca6c7b?rik=9IQANZ1n6%2flsYQ&pid=ImgRaw&r=0&sres=1&sresct=1" alt="banner" />
+            style={{
+              objectFit: "cover",
+            }}
+            fill
+            src="https://th.bing.com/th/id/R.e8d6e37567379bf097e5803ef8ca6c7b?rik=9IQANZ1n6%2flsYQ&pid=ImgRaw&r=0&sres=1&sresct=1"
+            alt="banner"
+          />
         </div>
+        
         <center className="mt-5">
-          <p className="text-sm">
+
+          <p className="mx-5 text-sm font-semibold">
             Welcome to SSD Auto, Sri Lanka&apos;s one-stop shop for high-quality
             vehicle spare parts. We can help you whether you&apos;re a skilled
             technician, an enthusiast about cars, or the owner of a vehicle that
@@ -35,9 +40,7 @@ export default function Home() {
           </p>
         </center>
       </div>
-      {/* <section className="mt-5 mx-2">
-        <MainSection />
-      </section> */}
+
       <section className="mt-10 mx-2">
         <div className="flex items-center justify-between text-xl font-semibold">
           <div>Featured Products</div>
@@ -53,19 +56,18 @@ export default function Home() {
           <FeaturedSection />
         </Suspense>
       </section>
-      <section className="mt-10 mx-2 mb-10">
+      <section className="mt-5 mx-2 mb-10">
         <div className="flex items-center justify-between text-xl font-semibold">
           <h1>Automotive Parts</h1>
         </div>
 
         <AutomotiveTypes />
       </section>
-      <section className="mt-20">
+      <section className="mt-10 mx-2">
         <AskProduct />
       </section>
-      <section className="mt-20">
-
-    <Footer />
+      <section className="mt-10">
+        <Footer />
       </section>
     </main>
   );

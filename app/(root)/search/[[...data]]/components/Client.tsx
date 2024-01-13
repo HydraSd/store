@@ -5,6 +5,7 @@ import MobileFilter from "./MobileFilter";
 import Card from "./Card";
 
 type Props = {
+  searchTerm: string;
   initialData: Product[];
   vehicleModal: categoryType[];
   automotiveType: categoryType[];
@@ -12,6 +13,7 @@ type Props = {
 };
 
 function Client({
+  searchTerm,
   initialData,
   vehicleModal,
   automotiveType,
@@ -64,6 +66,7 @@ function Client({
             onSelectCategory={filterResultsByCriteria}
           />
           <div className="lg:h-screen lg:overflow-y-auto">
+            <h1 className="text-xl font-semibold m-2 md:my-2">Search results for: {searchTerm}</h1>
             {results.length !== 0 ? (
               <div>
                 {results.map((result: Product) => (

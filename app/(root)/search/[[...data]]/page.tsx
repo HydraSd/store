@@ -20,7 +20,8 @@ async function SearchPage({ params }: Props) {
 
   return (
     <div>
-      <Client 
+      <Client
+       searchTerm={search}
        initialData={results}
        vehicleModal={vehicleModal}
        automotiveType={automotiveType}
