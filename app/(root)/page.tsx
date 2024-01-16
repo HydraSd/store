@@ -28,7 +28,7 @@ export default function Home() {
         <center className="mt-5">
 
           <p className="mx-5 text-sm font-semibold">
-            Welcome to SSD Auto, Sri Lanka&apos;s one-stop shop for high-quality
+            Welcome to DOOL Motors, Sri Lanka&apos;s one-stop shop for high-quality
             vehicle spare parts. We can help you whether you&apos;re a skilled
             technician, an enthusiast about cars, or the owner of a vehicle that
             needs new components. Browse our huge inventory of genuine and

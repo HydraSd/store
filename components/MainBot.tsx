@@ -14,14 +14,14 @@ export default function MyChatComponent() {
     script.onload = () => {
         // @ts-ignore
       window.botpressWebChat.init({
-        "composerPlaceholder": "Chat with SSD Auto",
+        "composerPlaceholder": "Chat with DOOL Motors",
         "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
         "botId": "8823f3b5-f894-4edc-8ea3-6d079a194419",
         "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
         "messagingUrl": "https://messaging.botpress.cloud",
         "clientId": "8823f3b5-f894-4edc-8ea3-6d079a194419",
         "lazySocket": true,
-        "botName": "SSD Auto",
+        "botName": "DOOL Motors",
         "frontendVersion": "v1",
         "showPoweredBy": true
       });

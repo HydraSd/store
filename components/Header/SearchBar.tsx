@@ -9,6 +9,12 @@ function SearchBar({}: Props) {
   const router = useRouter();
   const [search, setSearch] = useState("");
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      SearchResult();
+    }
+  };
+
   const SearchResult = () => {
     if(search) {
       router.push(`/search/${search}`)
@@ -21,6 +27,7 @@ function SearchBar({}: Props) {
             <input 
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            onKeyDown={handleKeyDown} 
             type="text" 
             placeholder="Search product"
              className='outline-none w-full text-gray-600 bg-white'
