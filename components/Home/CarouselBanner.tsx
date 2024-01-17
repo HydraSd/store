@@ -23,7 +23,7 @@ function CarouselBanner({}: Props) {
     <div className="overflow-hidden cursor-pointer" ref={emblaRef}>
       <div className="flex">
         {images.map((img) => (
-          <div className="flex-[0_0_100%]  h-[300px] md:h-[500px] w-screenmin-w-0 relative" key={img}>
+          <div className="flex-[0_0_100%]  h-[300px] md:h-[500px] w-screen min-w-0 relative" key={img}>
             <Image
               key={img}
               src={img}

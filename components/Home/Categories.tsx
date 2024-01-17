@@ -1,54 +1,62 @@
-import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 
-type Props = {};
 
-function Categories({}: Props) {
-  const categories = [
-    {
-      id: 0,
-      name: "Automotive Parts",
-      document: "automotive",
-    },
-    {
-      id: 2,
-      name: "Industrial Equipment Parts",
-      document: "industrials",
-    },
-    {
-      id: 3,
-      name: "Construction Equipment Parts",
-      document: "constructions",
-    },
-    {
-      id: 4,
-      name: "Bicycle and Motorcycle Parts",
-      document: "bicycles",
-    },
-  ];
+const data = [
+  {
+    id: 1,
+    name: "BODY PARTS",
+    img: "/icons/exterior.png",
+    path: "Interior and Exterior Accessories"
+  },
+  {
+    id: 2,
+    name: "ENGINE PARTS",
+    img: "/icons/engine.png",
+    path: "Engine Components"
+  },
+  {
+    id: 3,
+    name: "FURNITURE PARTS",
+    img: "/icons/seat.png",
+    path: "Interior and Exterior Accessories"
+
+  },
+  {
+    id: 4,
+    name: "LIGHTING PARTS",
+    img: "/icons/beam.png",
+    path: "Electrical components"
+  },
+  {
+    id: 5,
+    name: "OIL & LUBRICANTS",
+    img: "/icons/engine-oil.png",
+  },
+];
+
+function Categories() {
+
   return (
-    <div className="">
-      {/* <div className="flex overflow-x-scroll sm:hidden w-screen">
-        {categories.map((category) => (
+    <div className="overflow-x-auto scrollbar-hide">
+      <div className="flex py-1 gap-2">
+        {data.map((category) => (
           <Link
-            key={category.document}
-            href={`categories/${category.document}`}
-            className="px-2 my-3 mx-2 font-semibold py-3 bg-white shadow-md cursor-pointer
-          hover:bg-black hover:text-white transition duration-150"
+          href={`/type/${category.path}`}
+            key={category.id}
+            className="flex-none bg-white py-5 px-4 shadow-lg rounded-md w-full sm:w-1/2 md:w-1/3 lg:w-1/5
+             cursor-pointer"
           >
-            {category.name}
-          </Link>
-        ))}
-      </div> */}
-      <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
-        {categories.map((category) => (
-          <Link
-            key={category.document}
-            href={`categories/${category.document}`}
-            className="px-2 my-1 mx-2 font-semibold py-3 bg-white shadow-md cursor-pointer
-            hover:bg-black hover:text-white transition duration-150"
-          >
-            {category.name}
+            <div className="flex items-center justify-between">
+              <div className="text-md font-bold">{category.name}</div>
+              <Image
+                key={category.id}
+                src={category.img}
+                alt={category.name}
+                height={50}
+                width={50}
+              />
+            </div>
           </Link>
         ))}
       </div>
