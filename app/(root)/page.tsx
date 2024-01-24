@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import CaurouselBanner from "@/components/Home/CarouselBanner";
 import Categories from "@/components/Home/Categories";
 import EngineOilSection from "@/components/Home/EngineOilSection";
+import NewsLetter from "@/components/Home/NewsLetter";
 
 export default function Home() {
   return (
@@ -81,7 +82,9 @@ export default function Home() {
       <section className="mt-10 mx-2">
         <AskProduct />
       </section>
-
+        <div className="mt-10 mx-2">
+          <NewsLetter />
+        </div>
       <section className="mt-10">
         <Footer />
       </section>

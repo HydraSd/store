@@ -16,10 +16,12 @@ function AskProduct({}: Props) {
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   const AskForProduct = async () => {
     setLoading(true);
 
-    if (name && email && description) {
+    if (name && email && description && emailRegex.test(email)) {
       const data = {
         name: name,
         email: email,
