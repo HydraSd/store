@@ -30,7 +30,7 @@ function User({}: Props) {
 
   return (
     <div>
-      <div className="flex mt-2 font-semibold justify-around text-white text-sm cursor-pointer sm:mt-0">
+      <div className="flex mt-2 font-semibold justify-around text-white cursor-pointer sm:mt-0">
         {user ? (
           <Menubar>
             <MenubarMenu>

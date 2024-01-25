@@ -3,11 +3,21 @@ import GetData from './firebase/get-data';
  
 export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
   const baseUrl = 'https://doolmotors.vercel.app/description/';
+  const blogBaseUrl = 'https://doolmotors.vercel.app/blog/'
   const products = (await GetData("products")).data
+  const blogs = (await GetData("blogs")).data
+  const blogIds = blogs.map((product:any) => product.id);
   const productIds = products.map((product:any) => product.id);
 
   const productEntries = productIds.map((productId:string) => ({
     url: baseUrl + productId,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  const blogEntries = blogIds.map((blogId:string) => ({
+    url: blogBaseUrl + blogId,
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.8,
@@ -20,7 +30,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
       changeFrequency: 'monthly',
       priority: 1,
     },
-    ...productEntries
+    {
+      url: 'https://doolmotors.vercel.app/blog',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 1,
+    },
+    ...productEntries,
+    ...blogEntries
     // {
     //   url: 'https://acme.com/about',
     //   lastModified: new Date(),

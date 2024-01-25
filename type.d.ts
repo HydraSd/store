@@ -13,7 +13,17 @@ type Product = {
     description: string;
     isFeatured: boolean
     isArchived: boolean
-  }
+}
+
+type Blogs = {
+  id: string;
+    images: string[];
+    imagesLink: string;
+    img: boolean;
+    name: string;
+    description: string;
+    date: string
+}
 
 type categoryType = {
   id: string

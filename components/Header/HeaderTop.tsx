@@ -1,5 +1,6 @@
 import React from "react";
 import User from "./User";
+import Link from "next/link";
 
 type Props = {};
 
@@ -10,7 +11,8 @@ function HeaderTop({}: Props) {
         {/* <div className="text-sm cursor-pointer">My Account</div>
         <div className="text-sm cursor-pointer">Wishlist</div>
         <div className="text-sm cursor-pointer">Compare List</div> */}
-        <a href="https://ssd-auto.blogspot.com/" className="text-sm cursor-pointer">Blog</a>
+        <Link href="/blog" className="cursor-pointer">Blog</Link>
+        {/* <a href="https://ssd-auto.blogspot.com/" className="text-sm cursor-pointer">Blog</a> */}
       </div>
       <User />
     </div>
