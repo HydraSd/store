@@ -3,6 +3,7 @@ import React from "react";
 import parse, { domToReact } from "html-react-parser";
 import Image from "next/image";
 import { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 
 type Props = {
@@ -154,6 +155,8 @@ async function page({ params }: Props) {
         </div>
         {description && <div>{parse(description, { replace: replaceH1 })}</div>}
       </div>
+      <div className="mt-5"/>
+      <Footer />
     </div>
   );
 }

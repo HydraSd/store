@@ -1,3 +1,4 @@
+'use client'
 import GetData from "@/app/firebase/get-data";
 import BlogCard from "@/components/Blog/Card";
 import React from "react";
