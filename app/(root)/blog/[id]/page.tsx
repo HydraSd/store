@@ -2,12 +2,31 @@ import GetBlog from "@/app/firebase/get-blog";
 import React from "react";
 import parse, { domToReact } from "html-react-parser";
 import Image from "next/image";
+import { Metadata } from "next";
+
 
 type Props = {
   params: {
     id: string;
   };
 };
+
+export async function generateMetadata(
+  {params}: Props,
+  // parent: ResolvedMetadata
+): Promise<Metadata> {
+  const blog = await GetBlog(params.id);
+
+
+  // const previousTitle =  parent.title
+  // const previousDescription = parent.description
+  return {
+    title: blog?.name ,
+    description: `DOOL Motors:${blog?.name}`
+  }
+}
+
+
 function replaceH1(domNode: any) {
   if (domNode.type === "tag" && domNode.name === "h1") {
     // Replace h1 tag with Tailwind CSS class

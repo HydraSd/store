@@ -1,6 +1,15 @@
 import GetData from "@/app/firebase/get-data";
 import BlogCard from "@/components/Blog/Card";
 import React from "react";
+import type { Metadata } from "next";
+
+
+export async function generateMetadata(
+): Promise<Metadata> {
+  return {
+    title: "DOOL Motors blog",
+  }
+}
 
 async function BlogPage() {
   const blogs = (await GetData("blogs")).data
