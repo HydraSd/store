@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next'
 import GetData from './firebase/get-data';
  
 export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
-  const baseUrl = 'https://doolmotors.vercel.app/description/';
-  const blogBaseUrl = 'https://doolmotors.vercel.app/blog/'
+  const baseUrl = 'https://doolmotors.com/description/';
+  const blogBaseUrl = 'https://doolmotors.com/blog/'
   const products = (await GetData("products")).data
   const blogs = (await GetData("blogs")).data
   const blogIds = blogs.map((product:any) => product.id);
@@ -25,13 +25,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
 
   return [
     {
-      url: 'https://doolmotors.vercel.app',
+      url: 'https://doolmotors.com',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: 'https://doolmotors.vercel.app/blog',
+      url: 'https://doolmotors.com/blog',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
