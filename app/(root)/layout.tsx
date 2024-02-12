@@ -1,9 +1,9 @@
+import { Analytics } from '@vercel/analytics/react';
 import HeaderTop from "@/components/Header/HeaderTop";
 import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header/Header";
-// import Bot from '@/components/Bot'
 import MyChatComponent from "@/components/MainBot";
 import ToastPorvider from "@/providers/toast-provider";
 // import Footer from '@/components/Footer'
@@ -39,7 +39,7 @@ export default function RootLayout({
         </div>
         {/* <Bot /> */}
         {children}
-
+        <Analytics />
         {/* <Footer /> */}
       </body>
     </html>
