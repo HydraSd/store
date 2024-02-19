@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import Header from "@/components/Header/Header";
 import MyChatComponent from "@/components/MainBot";
 import ToastPorvider from "@/providers/toast-provider";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 // import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ["latin"] });
@@ -40,6 +41,7 @@ export default function RootLayout({
         {/* <Bot /> */}
         {children}
         <Analytics />
+        <SpeedInsights />
         {/* <Footer /> */}
       </body>
     </html>
