@@ -43,12 +43,12 @@ function EngineOilSection() {
             <div className="absolute  z-10 px-2 h-full w-full  flex flex-col justify-center ">
               <h2 className="text-4xl font-bold z-10">{card.title}</h2>
               <p className="text-sm font-light">{card.description}</p>
-              <div
+              {/* <div
                 className="my-2 py-1 px-2 w-[100px] bg-yellow-400 rounded-xl
               font-semibold text-black cursor-pointer hover:scale-105 transition duration-100 ease-out hover:shadow-lg"
               >
                 Shop Now
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
