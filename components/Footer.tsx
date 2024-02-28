@@ -18,14 +18,14 @@ export default async function Footer({}: Props) {
               passion for serving our customers, we offer a comprehensive range
               of high-quality spare parts for various automotive types. From
               engine components to electrical parts, suspension systems to
-              braking solutions, we've got you covered. Located in the heart of
-              Sri Lanka, our shop stands as a beacon of reliability and
+              braking solutions, we&apos;ve got you covered. Located in the
+              heart of Sri Lanka, our shop stands as a beacon of reliability and
               trustworthiness in the automotive spare parts industry. Whether
-              you're a professional mechanic or a car enthusiast, we cater to
-              all your requirements with an extensive inventory and competitive
-              prices. At DOOL Motors, we believe in delivering not just spare
-              parts but also unparalleled customer satisfaction. Experience the
-              difference with us today!
+              you&apos;re a professional mechanic or a car enthusiast, we cater
+              to all your requirements with an extensive inventory and
+              competitive prices. At DOOL Motors, we believe in delivering not
+              just spare parts but also unparalleled customer satisfaction.
+              Experience the difference with us today!
             </p>
           </div>
           <div>
