@@ -49,7 +49,7 @@ export default async function Footer({}: Props) {
           <div>
             <h2 className="text-lg font-bold">Other Links</h2>
             <div className="text-sm font-semibold cursor-pointer hover:underline">
-              <a href="https://www.facebook.com/profile.php?id=61555638695194">
+              <a href="https://www.facebook.com/profile.php?id=61555638695194" target="_blank">
                 Facebook
               </a>
             </div>
