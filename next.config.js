@@ -10,6 +10,9 @@ const nextConfig = {
             },
         ],
     },
+    devServer: {
+        fastRefresh: true,
+      },
 }
 
 module.exports = nextConfig
