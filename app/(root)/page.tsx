@@ -10,6 +10,7 @@ import CaurouselBanner from "@/components/Home/CarouselBanner";
 import Categories from "@/components/Home/Categories";
 import EngineOilSection from "@/components/Home/EngineOilSection";
 import NewsLetter from "@/components/Home/NewsLetter";
+import VehicleAccessories from "@/components/Home/VehicleAccessories";
 
 export default function Home() {
   return (
@@ -68,6 +69,23 @@ export default function Home() {
           <FeaturedSection />
         </Suspense>
       </section>
+
+      <section className="mt-10 mx-2">
+        <div className="flex items-center justify-between text-xl font-semibold">
+          <div>Vehicle Accessories</div>
+          <ArrowRight className="text-gray-500" />
+        </div>
+        <Suspense
+          fallback={
+            <div className="flex">
+              <ProductCardSkeleton />
+            </div>
+          }
+        >
+        <VehicleAccessories />
+        </Suspense>
+      </section>
+
       <section className="mt-5 mx-2 mb-10">
         <div className="flex items-center justify-between text-xl font-semibold">
           <h1>Automotive Parts</h1>
