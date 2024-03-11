@@ -2,15 +2,14 @@ import FeaturedSection from "@/components/Home/FeaturedSection";
 import ProductCardSkeleton from "@/components/skeletons/productCard-skeleton";
 import { ArrowRight } from "lucide-react";
 import { Suspense } from "react";
-import Image from "next/image";
 import AutomotiveTypes from "@/components/Home/AutomotiveTypes";
 import AskProduct from "@/components/Home/AskProduct";
 import Footer from "@/components/Footer";
-import CaurouselBanner from "@/components/Home/CarouselBanner";
 import Categories from "@/components/Home/Categories";
 import EngineOilSection from "@/components/Home/EngineOilSection";
 import NewsLetter from "@/components/Home/NewsLetter";
 import VehicleAccessories from "@/components/Home/VehicleAccessories";
+import RecommendMain from "@/components/Home/Recommendations/RecommendMain";
 
 export default function Home() {
   return (
@@ -29,31 +28,30 @@ export default function Home() {
         </div> */}
         <section className="py-5 px-2">
           <center className="bg-yellow-400 py-5 px-2 rounded-md shadow-lg">
-          <h2 className="text-xl font-bold">
-            Revitalize Your Ride with DOOL Motors: Your Premier Destination for
-            Genuine, Affordable Vehicle Spare Parts in Sri Lanka!
-          </h2>
-    
-          <h3 className="text-sm font-light">
-            Welcome to DOOL Motors, Sri Lanka&apos;s one-stop shop for high-quality
-            vehicle spare parts. We can help you whether you&apos;re a skilled
-            technician, an enthusiast about cars, or the owner of a vehicle that
-            needs new components. Browse our huge inventory of genuine and
-            reasonably priced spare parts for all major makes and models. We
-            provide a seamless online shopping experience, quick delivery, and
-            great customer service as part of our dedication to excellence. You
-            can rely on us to maintain your cars operating properly. Explore our
-            extensive selection of automotive solutions now!
-          </h3>
+            <h2 className="text-xl font-bold">
+              Revitalize Your Ride with DOOL Motors: Your Premier Destination
+              for Genuine, Affordable Vehicle Spare Parts in Sri Lanka!
+            </h2>
 
-          
+            <h3 className="text-sm font-light">
+              Welcome to DOOL Motors, Sri Lanka&apos;s one-stop shop for
+              high-quality vehicle spare parts. We can help you whether
+              you&apos;re a skilled technician, an enthusiast about cars, or the
+              owner of a vehicle that needs new components. Browse our huge
+              inventory of genuine and reasonably priced spare parts for all
+              major makes and models. We provide a seamless online shopping
+              experience, quick delivery, and great customer service as part of
+              our dedication to excellence. You can rely on us to maintain your
+              cars operating properly. Explore our extensive selection of
+              automotive solutions now!
+            </h3>
           </center>
-        
         </section>
       </div>
       <section className="mt-10 mx-2">
         <Categories />
       </section>
+      <RecommendMain />
       <section className="mt-10 mx-2">
         <div className="flex items-center justify-between text-xl font-semibold">
           <div>Featured Products</div>
@@ -82,7 +80,7 @@ export default function Home() {
             </div>
           }
         >
-        <VehicleAccessories />
+          <VehicleAccessories />
         </Suspense>
       </section>
 
@@ -100,9 +98,9 @@ export default function Home() {
       <section className="mt-10 mx-2">
         <AskProduct />
       </section>
-        <div className="mt-10 mx-2">
-          <NewsLetter />
-        </div>
+      <div className="mt-10 mx-2">
+        <NewsLetter />
+      </div>
       <section className="mt-10">
         <Footer />
       </section>
