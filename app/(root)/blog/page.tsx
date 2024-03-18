@@ -30,7 +30,7 @@ async function BlogPage() {
   // },[])
   return (
     <main className="mt-4 mx-2">
-      <h1 className="text-4xl font-bold">Blogs</h1>
+      <h1 className="text-4xl font-bold">Blog</h1>
       <ClientComponent />
     </main>
   );
