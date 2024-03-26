@@ -92,7 +92,7 @@ function OrderButton({ products }: Props) {
           <div>
             The final price, including delivery fees, will be confirmed via
             email within 48 hours. For any immediate inquiries, please contact
-            us at redmixssd@gmail.com. Thank you for choosing us.
+            us at doolmotors@gmail.com. Thank you for choosing us.
           </div>
 
           <Input 
