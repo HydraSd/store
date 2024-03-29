@@ -27,6 +27,7 @@ function AskProduct({}: Props) {
         email: email,
         description: description,
         date: new Date().toISOString(),
+        response: false
       };
       await CreateData("ask-product", data);
       toast.success("Your request has been sent successfully.");
