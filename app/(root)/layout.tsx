@@ -4,7 +4,6 @@ import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header/Header";
-import MyChatComponent from "@/components/MainBot";
 import ToastPorvider from "@/providers/toast-provider";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 // import Footer from '@/components/Footer'
@@ -24,6 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <script src="//code.tidio.co/of3prjoosirww7kz3w8cufwx73px5mkq.js" async></script>
       <head>
         <meta
           name="google-site-verification"
@@ -35,10 +35,6 @@ export default function RootLayout({
         <ToastPorvider />
         <HeaderTop />
         <Header />
-        <div className="z-60">
-          <MyChatComponent />
-        </div>
-        {/* <Bot /> */}
         {children}
         <Analytics />
         <SpeedInsights />
