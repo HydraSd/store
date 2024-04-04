@@ -68,6 +68,26 @@ function replaceH1(domNode: any) {
       </h2>
     );
   }
+  if (domNode.type === "tag" && domNode.name === "h3") {
+    // Replace h1 tag with Tailwind CSS class
+    return (
+      <h2 className="font-bold my-2 ">
+        {domToReact(domNode.children, {
+          replace: (childNode) => {
+            // Ensure each child is of type ReactNode
+            return Array.isArray(childNode)
+              ? childNode.map((node, index) => (
+                  <React.Fragment key={index}>
+                    {domToReact([node], {})}
+                  </React.Fragment>
+                ))
+              : childNode;
+          },
+        })}
+      </h2>
+    );
+  }
+
 
   if (domNode.type === "tag" && domNode.name === "a") {
     const href = domNode.attribs.href;
@@ -143,7 +163,7 @@ async function page({ params }: Props) {
   const description = blog?.description;
   return (
     <div>
-      <div className="mx-3 sm:mx-10">
+      <div className="mx-3 sm:mx-20">
         <div className="relative h-[300px] w-full my-5 rounded-md">
           <Image 
             className="rounded-md"
