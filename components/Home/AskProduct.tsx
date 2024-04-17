@@ -6,12 +6,12 @@ import CreateData from "@/app/firebase/create-data";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { Button } from "../ui/button";
+import { Loader2 } from "lucide-react";
 
 type Props = {};
 
 function AskProduct({}: Props) {
   const [loading, setLoading] = useState(false);
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
@@ -27,7 +27,8 @@ function AskProduct({}: Props) {
         email: email,
         description: description,
         date: new Date().toISOString(),
-        response: false
+        response: false,
+        loc: window.location.href
       };
       await CreateData("ask-product", data);
       toast.success("Your request has been sent successfully.");
@@ -42,9 +43,9 @@ function AskProduct({}: Props) {
     <div className="bg-white shadow-md p-2">
       <h2 className="text-xl font-bold">Ask Us Anything About Our Products</h2>
       <p>
-        Have questions about our products? We&apos;re here to help! Fill out the form
-        below to inquire about anything you&apos;d like to know. Our team is eager to
-        assist you in finding the perfect solution for your needs
+        Have questions about our products? We&apos;re here to help! Fill out the
+        form below to inquire about anything you&apos;d like to know. Our team
+        is eager to assist you in finding the perfect solution for your needs
       </p>
       <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 sm:space-x-2">
         <div>
@@ -75,9 +76,16 @@ function AskProduct({}: Props) {
         />
       </div>
       <center className="mt-3">
-        <Button onClick={AskForProduct} className="w-full">
-          Submit
-        </Button>
+        {!loading ? (
+          <Button onClick={AskForProduct} className="w-full">
+            Submit
+          </Button>
+        ) : (
+          <Button disabled>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            Please wait
+          </Button>
+        )}
       </center>
     </div>
   );
