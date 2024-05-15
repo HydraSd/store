@@ -4,6 +4,7 @@ import parse, { domToReact } from "html-react-parser";
 import Image from "next/image";
 import { Metadata } from "next";
 import Footer from "@/components/Footer";
+import NewsLetter from "@/components/Home/NewsLetter";
 
 
 type Props = {
@@ -174,6 +175,10 @@ async function page({ params }: Props) {
           />
         </div>
         {description && <div>{parse(description, { replace: replaceH1 })}</div>}
+      </div>
+      <div className="my-5">
+
+      <NewsLetter />
       </div>
       <div className="mt-5"/>
       <Footer />

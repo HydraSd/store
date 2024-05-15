@@ -9,8 +9,8 @@ export default async function Footer({}: Props) {
   return (
     <div className="bg-white border-t w-full">
       <div className="mx-auto py-4">
-        <div className="mx-5 my-5 grid grid-cols-1 sm:grid-col-2 md:grid-cols-3 space-x-2 space-y-2 sm:space-y-0">
-          <div>
+        <div className="mx-5 my-5 grid grid-cols-1 sm:grid-col-2 md:grid-cols-3  sm:space-y-0">
+          <center>
             <h2 className="text-lg font-bold">About Dool Motors</h2>
             <p className="font-light">
               Welcome to DOOL Motors, your one-stop destination for all your
@@ -27,8 +27,8 @@ export default async function Footer({}: Props) {
               just spare parts but also unparalleled customer satisfaction.
               Experience the difference with us today!
             </p>
-          </div>
-          <div>
+          </center>
+          <center className="pt-5 md:pt-0">
             <h2 className="text-lg font-bold">Quick Links</h2>
             <div className="text-sm font-semibold cursor-pointer hover:underline">
               <Link href="/">Home</Link>
@@ -45,15 +45,15 @@ export default async function Footer({}: Props) {
                 </Link>
               </div>
             ))}
-          </div>
-          <div>
+          </center>
+          <center className="pt-5 md:pt-0">
             <h2 className="text-lg font-bold">Other Links</h2>
             <div className="text-sm font-semibold cursor-pointer hover:underline">
-              <a href="https://www.facebook.com/profile.php?id=61555638695194" target="_blank">
+              <Link href="https://www.facebook.com/profile.php?id=61555638695194" target="_blank">
                 Facebook
-              </a>
+              </Link>
             </div>
-          </div>
+          </center>
         </div>
         <p className="text-center text-xs text-black">
           &copy; 2024 DOOL Motors, Inc, All rights reserved
