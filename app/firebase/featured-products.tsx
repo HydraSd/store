@@ -6,20 +6,20 @@ async function FeaturedProducts() {
     // Create a Firestore query by referencing the collection
     const firestoreCollection = collection(db, "products");
 
-    // If a category filter is provided, add a "where" clause to the query
-   
-      const firestoreQuery = query(firestoreCollection, where("isFeatured", "==", true));
-      const querySnapshot = await getDocs(firestoreQuery);
-      
-      const data: any[] = [];
-      querySnapshot.forEach((doc) => {
-        data.push({ id: doc.id, ...doc.data() });
-      });
+    // Create a query to filter featured products
+    const firestoreQuery = query(firestoreCollection, where("isFeatured", "==", true));
+    const querySnapshot = await getDocs(firestoreQuery);
+    
+    const data: any = [];
+    querySnapshot.forEach((doc) => {
+      const docData = doc.data();
+      const { link, ...rest } = docData; // Exclude the 'link' field
+      data.push({ id: doc.id, ...rest });
+    });
 
-      return {
-        data,
-      };
-   
+    return {
+      data,
+    };
   } catch (e) {
     console.error("Error fetching data:", e);
     throw e;
