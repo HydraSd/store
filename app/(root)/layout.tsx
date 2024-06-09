@@ -7,6 +7,7 @@ import Header from "@/components/Header/Header";
 import ToastPorvider from "@/providers/toast-provider";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 // import Footer from '@/components/Footer'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
         <SpeedInsights />
         {/* <Footer /> */}
       </body>
+      <GoogleAnalytics gaId='G-VTZYJGPBPM' />
     </html>
   );
 }
