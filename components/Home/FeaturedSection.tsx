@@ -1,12 +1,25 @@
 import ProductCard from "@/components/ProductCard";
-import FeaturedProducts from "@/app/firebase/featured-products";
+import next from "next";
+// import FeaturedProducts from "@/app/firebase/featured-products";
 
 type Props = {};
 
+
 async function FeaturedSection({}: Props) {
   // await new Promise((resolve) => setTimeout(resolve, 10000));
-  const featuredProducts = (await FeaturedProducts()).data;
-  
+  // const featuredProducts = (await FeaturedProducts()).data;
+
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/featured`, 
+    {
+      method: "GET",
+      next: {
+        revalidate: 60 * 60 * 24 * 2
+      }
+    }
+  )
+  const data = await res.json()
+  // console.log(data.featuredProducts)
+  const featuredProducts = data.featuredProducts
   return (
     <div>
       
