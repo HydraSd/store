@@ -34,33 +34,6 @@ export default function RootLayout({
           content="v9c2CEKmgiTTg8-_C_9DIsWD0_VFZCFM_7Fkh48uaTI"
         />
 
-        {/* Facebook */}
-        <meta property="og:url" content="https://doolmotors.com" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="DOOL Motors: Affordable Spare Parts in Sri Lanka"
-        />
-        <meta
-          property="og:description"
-          content="DOOL Motors: Your go-to for genuine, affordable vehicle parts in Sri Lanka. Explore a wide range with seamless online shopping and quick delivery."
-        />
-        <meta property="og:image" content="/logo/logodool.png" />
-
-        {/* Tiwitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="doolmotors.com" />
-        <meta property="twitter:url" content="https://doolmotors.com" />
-        <meta
-          name="twitter:title"
-          content="DOOL Motors: Affordable Spare Parts in Sri Lanka"
-        />
-        <meta
-          name="twitter:description"
-          content="DOOL Motors: Your go-to for genuine, affordable vehicle parts in Sri Lanka. Explore a wide range with seamless online shopping and quick delivery."
-        />
-        <meta name="twitter:image" content="/logo/logodool.png"></meta>
-
         <link rel="icon" href="/logo/logodool.png" sizes="any" />
       </head>
       <body className={inter.className}>
