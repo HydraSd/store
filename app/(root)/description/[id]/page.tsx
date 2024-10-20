@@ -18,7 +18,6 @@ export async function generateMetadata(
   // parent: ResolvedMetadata
 ): Promise<Metadata> {
   const product = await GetDocument("products", decodeURI(params.id));
-
   // const previousTitle =  parent.title
   // const previousDescription = parent.description
   return {

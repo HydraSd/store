@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "DOOL Motors: Affordable Spare Parts in Sri Lanka",
   description:
     "DOOL Motors: Your go-to for genuine, affordable vehicle parts in Sri Lanka. Explore a wide range with seamless online shopping and quick delivery.",
-};
+  };
 
 export default function RootLayout({
   children,

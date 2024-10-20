@@ -10,6 +10,34 @@ import EngineOilSection from "@/components/Home/EngineOilSection";
 import NewsLetter from "@/components/Home/NewsLetter";
 import VehicleAccessories from "@/components/Home/VehicleAccessories";
 import RecommendMain from "@/components/Home/Recommendations/RecommendMain";
+import { Metadata } from "next";
+
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "DOOL Motors",
+    description: "DOOL Motors: Your go-to for genuine, affordable vehicle parts in Sri Lanka. Explore a wide range with seamless online shopping and quick delivery.",
+    openGraph: {
+      title: "DOOL Motors",
+      description: "Your go-to for genuine, affordable vehicle parts in Sri Lanka.",
+      images: [
+        {
+          url: '/logo/logo.png', // Update this to the actual path of your image
+          width: 800, // Specify width (optional)
+          height: 600, // Specify height (optional)
+          alt: 'DOOL Motors', // Alt text for accessibility
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: "DOOL Motors",
+      description: "Your go-to for genuine, affordable vehicle parts in Sri Lanka.",
+      images: ['/logo/logo.png'], // Use the actual image path
+    },
+  };
+}
+
 
 export default function Home() {
   return (
