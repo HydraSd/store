@@ -6,21 +6,22 @@ const data = [
     id: 1,
     title: "ENGINE OIL",
     description: "SALE UP TO 25% OFF",
-    img: "https://wpbingosite.com/wordpress/bumbleb/wp-content/uploads/2022/09/banner-12.jpg",
+    img: "/banner/engine_oil.png",
   },
   {
     id: 2,
     title: "BREAK PADS",
     description: "Sales up to 25% off",
-    img: "https://wpbingosite.com/wordpress/bumbleb/wp-content/uploads/2023/03/ban-4.jpg",
+    img: "/banner/charger.png",
   },
   {
     id: 3,
-    title: "TURBOR CHARGER",
+    title: "TURBO CHARGER",
     description: "Top quality low price",
-    img: "https://wpbingosite.com/wordpress/bumbleb/wp-content/uploads/2022/09/banner-14.jpg",
+    img: "/banner/break_pads.png",
   },
 ];
+
 
 function EngineOilSection() {
   return (
