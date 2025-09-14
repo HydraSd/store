@@ -16,13 +16,12 @@ function Header({}: Props) {
       <Link href="/" className="py-2 flex items-center text-3xl font-bold">
         <h2 className="text-red-600">DOOL</h2>
         <h2>Motors</h2>
-        {/* <Image width={250} height={250} alt="" src="/logo/logo2.png" /> */}
       </Link>
       <div className="hidden md:inline-block">
         <SearchBar />
       </div>
 
-    <CartComponent />
+      <CartComponent />
 
       <div className="md:hidden">
         <SearchBar />
