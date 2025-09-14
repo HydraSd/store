@@ -12,7 +12,7 @@ function SearchBar({}: Props) {
   const [loading, setLoading] = useState(false);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
-  const [highlightIndex, setHighlightIndex] = useState<number>(-1); // for keyboard nav
+  const [highlightIndex, setHighlightIndex] = useState<number>(-1);
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Load recent searches on mount
@@ -28,6 +28,7 @@ function SearchBar({}: Props) {
     if (loading) setLoading(false);
   }, [pathname]);
 
+  // Filtered dropdown searches
   const filteredSearches = recentSearches.filter((item) =>
     item.toLowerCase().includes(search.toLowerCase())
   );
@@ -35,7 +36,7 @@ function SearchBar({}: Props) {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       if (highlightIndex >= 0 && highlightIndex < filteredSearches.length) {
-        // select highlighted item
+        setSearch(filteredSearches[highlightIndex]);
         SearchResult(filteredSearches[highlightIndex]);
       } else {
         SearchResult(search);
@@ -135,7 +136,10 @@ function SearchBar({}: Props) {
                     : "text-gray-700 hover:bg-gray-100"
                 }`}
                 onMouseEnter={() => setHighlightIndex(i)}
-                onClick={() => SearchResult(item)}
+                onClick={() => {
+                  setSearch(item); // autofill input
+                  setShowDropdown(false);
+                }}
               >
                 <Clock size={16} className="text-gray-400" />
                 {item}
